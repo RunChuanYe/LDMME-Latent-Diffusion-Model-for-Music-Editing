@@ -6,27 +6,27 @@
     <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
     <!-- Replace the content tag with appropriate information -->
     <!-- TODO: open graph -->
-    <meta name="description" content="DESCRIPTION META TAG">
+    <!-- <meta name="description" content="DESCRIPTION META TAG">
     <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
     <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
-    <meta property="og:url" content="URL OF THE WEBSITE" />
+    <meta property="og:url" content="URL OF THE WEBSITE" /> -->
     <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-    <meta property="og:image" content="static/image/your_banner_image.png" />
+    <!-- <meta property="og:image" content="static/image/your_banner_image.png" />
     <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:image:height" content="630" /> -->
 
     <!-- TODO: twitter -->
-    <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-    <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+    <!-- <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+    <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG"> -->
     <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-    <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-    <meta name="twitter:card" content="summary_large_image">
+    <!-- <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+    <meta name="twitter:card" content="summary_large_image"> -->
     <!-- Keywords for your paper to be indexed by-->
-    <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 
 
-    <title>Academic Project Page</title>
+    <title>LDMME: Latent Diffusion Model for Music Editing</title>
     <!-- TODO -->
     <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
@@ -47,21 +47,27 @@
 
     <style>
         /* #tablesContainer { */
-            /* display: flex; */
-            /* justify-content: center; 居中对齐 */
-            /* align-items: center; 垂直居中对齐 (如果需要) */
-            /* height: 100vh; 使容器填满视口高度（可选） */
+        /* display: flex; */
+        /* justify-content: center; 居中对齐 */
+        /* align-items: center; 垂直居中对齐 (如果需要) */
+        /* height: 100vh; 使容器填满视口高度（可选） */
         /* } */
         table {
-            width: 80%; /* 或任何固定宽度 */
+            width: 80%;
+            /* 或任何固定宽度 */
             border-collapse: collapse;
         }
-        td, th {
+
+        td,
+        th {
             border: 1px solid #ddd;
             padding: 8px;
         }
     </style>
 
+    <style>
+
+    </style>
 
 
 </head>
@@ -74,23 +80,24 @@
             <div class="container is-max-desktop">
                 <div class="columns is-centered">
                     <div class="column has-text-centered">
-                        <h1 class="title is-1 publication-title">Academic Project Page</h1>
+                        <h1 class="title is-1 publication-title">LDMME: Latent Diffusion Model for Music Editing</h1>
                         <div class="is-size-5 publication-authors">
                             <!-- Paper authors -->
                             <span class="author-block">
-                                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First
-                                    Author</a><sup>*</sup>,</span>
-                            <span class="author-block">
-                                <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second
-                                    Author</a><sup>*</sup>,</span>
-                            <span class="author-block">
-                                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                            </span>
+                                Runchuan Ye<sup>1, 3</sup>,</span>
+                            <span class="author-block">Shiyin Kang<sup>2</sup>,</span>
+                            <span class="author-block">Zhiyong Wu<sup>3</sup></span>
                         </div>
 
                         <div class="is-size-5 publication-authors">
-                            <span class="author-block">Institution Name<br>Conferance name and year</span>
-                            <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                            <span class="author-block">
+                                <sup>1</sup> Harbin Institute of Technology (Shenzhen), China
+                                <br><sup>2</sup> Skywork AI PTE. LTD., Beijing, China
+                                <br><sup>3</sup> Shenzhen International Graduate School, Tsinghua University, Shenzhen,
+                                China
+                                <br><a href="https://www.ncmmsc.org.cn/">National Conference on Man-Machine Speech
+                                    Communication (NCMMSC2024)</a></span>
+                            <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                         </div>
 
                         <div class="column has-text-centered">
@@ -152,8 +159,8 @@
         <div class="container is-max-desktop">
             <div class="hero-body">
                 <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
-                    <!-- Your video here -->
-                    <!-- <source src="static/videos/banner_video.mp4" type="video/mp4">
+    <!-- Your video here -->
+    <!-- <source src="static/videos/banner_video.mp4" type="video/mp4">
                 </video>
                 <h2 class="subtitle has-text-centered">
                     Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at,
@@ -173,12 +180,24 @@
                     <h2 class="title is-3">Abstract</h2>
                     <div class="content has-text-justified">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante
-                            aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec
-                            accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus
-                            euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat
-                            ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo.
-                            Pellentesque auctor leo vitae sagittis suscipit.
+                            Diffusion models are widely used in the fields of image, audio,
+                            and speech generation. While diffusion models for image editing
+                            have been extensively studied, their application to music-editing tasks
+                            has been relatively neglected. The current research has several shortcomings:
+                            1) lack of support for 44.1KHz stereo music, 2) generation of
+                            non-music content during editing, and 3) an editing algorithm that does
+                            not fully consider existing information, resulting in unnatural edits. To
+                            address these limitations, we propose the LDMME model. We first create
+                            a high-quality 44.1KHz sampling rate stereo audio dataset, which
+                            excluded non-music data, to train the LDMME. In addition, we enhance
+                            the quality of the generated music by strengthening the detailed modeling
+                            capability of LDMME. Subsequently, we improve the existing editing
+                            algorithm by considering the original music information during editing
+                            to enhance the naturalness of the edited music. In both music generation and editing tasks,
+                            the LDMME model outperforms AudioLDM and
+                            MusicLDM according to various subjective and objective metrics. The
+                            samples are available on this website:
+                            https://runchuanye.github.io/LDMME-Latent-Diffusion-Model-for-Music-Editing/.
                         </p>
                     </div>
                 </div>
@@ -186,6 +205,18 @@
         </div>
     </section>
     <!-- End paper abstract -->
+    
+    <section class="section hero has-text-centered">
+        <div id="toc">
+            <h2 class="title is-3 is-center">Table of Contents</h2>
+            <ul>
+                <li><a href="#table1">Table 1: Music Generation Based on Text Descriptions.</a></li>
+                <li><a href="#table2">Table 2: Smooth Concatenation of Music Segments. (
+                    Coming Soon.)</a></li>
+                <li><a href="#table3">Table 3: Style Transfer of Music Segments Based on Text Descriptions. (Coming Soon.)</a></li>
+            </ul>
+        </div>
+    </section>
 
     <section class="section hero">
         <div class="hero-body">
@@ -201,29 +232,29 @@
             <div class="container">
                 <div id="results-carousel" class="carousel results-carousel">
                     <div class="item"> -->
-                        <!-- Your image here -->
-                        <!-- <img src="static/images/carousel1.jpg" alt="MY ALT TEXT" />
+    <!-- Your image here -->
+    <!-- <img src="static/images/carousel1.jpg" alt="MY ALT TEXT" />
                         <h2 class="subtitle has-text-centered">
                             First image description.
                         </h2>
                     </div>
                     <div class="item"> -->
-                        <!-- Your image here -->
-                        <!-- <img src="static/images/carousel2.jpg" alt="MY ALT TEXT" />
+    <!-- Your image here -->
+    <!-- <img src="static/images/carousel2.jpg" alt="MY ALT TEXT" />
                         <h2 class="subtitle has-text-centered">
                             Second image description.
                         </h2>
                     </div>
                     <div class="item"> -->
-                        <!-- Your image here -->
-                        <!-- <img src="static/images/carousel3.jpg" alt="MY ALT TEXT" />
+    <!-- Your image here -->
+    <!-- <img src="static/images/carousel3.jpg" alt="MY ALT TEXT" />
                         <h2 class="subtitle has-text-centered">
                             Third image description.
                         </h2>
                     </div>
                     <div class="item"> -->
-                        <!-- Your image here -->
-                        <!-- <img src="static/images/carousel4.jpg" alt="MY ALT TEXT" />
+    <!-- Your image here -->
+    <!-- <img src="static/images/carousel4.jpg" alt="MY ALT TEXT" />
                         <h2 class="subtitle has-text-centered">
                             Fourth image description.
                         </h2>
@@ -241,14 +272,14 @@
     <!-- <section class="hero is-small is-light">
         <div class="hero-body">
             <div class="container"> -->
-                <!-- Paper video. -->
-                <!-- <h2 class="title is-3">Video Presentation</h2>
+    <!-- Paper video. -->
+    <!-- <h2 class="title is-3">Video Presentation</h2>
                 <div class="columns is-centered has-text-centered">
                     <div class="column is-four-fifths">
 
                         <div class="publication-video"> -->
-                            <!-- Youtube embed code here -->
-                            <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0"
+    <!-- Youtube embed code here -->
+    <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0"
                                 allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         </div>
                     </div>
@@ -267,20 +298,20 @@
                 <div id="results-carousel" class="carousel results-carousel">
                     <div class="item item-video1">
                         <video poster="" id="video1" autoplay controls muted loop height="100%"> -->
-                            <!-- Your video file here -->
-                            <!-- <source src="static/videos/carousel1.mp4" type="video/mp4">
+    <!-- Your video file here -->
+    <!-- <source src="static/videos/carousel1.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="item item-video2">
                         <video poster="" id="video2" autoplay controls muted loop height="100%"> -->
-                            <!-- Your video file here -->
-                            <!-- <source src="static/videos/carousel2.mp4" type="video/mp4">
+    <!-- Your video file here -->
+    <!-- <source src="static/videos/carousel2.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="item item-video3">
                         <video poster="" id="video3" autoplay controls muted loop height="100%">\ -->
-                            <!-- Your video file here -->
-                            <!-- <source src="static/videos/carousel3.mp4" type="video/mp4">
+    <!-- Your video file here -->
+    <!-- <source src="static/videos/carousel3.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
@@ -369,7 +400,7 @@
          * @param {string} tableTitle - Title of the table.
          * @param {Array} headers - Array of table headers.
          */
-        function createTable(containerId, descriptions, paths, tableTitle, headers) {
+        function createTable(containerId, descriptions, paths, tableTitle, headers, tableId) {
             const container = document.getElementById(containerId);
 
             // Create table elements
@@ -377,6 +408,7 @@
             const tableTitleElement = document.createElement('h2');
             tableTitleElement.textContent = tableTitle;
             tableTitleElement.className = "is-center title is-2 publication-title"
+            tableTitleElement.id = tableId
             container.appendChild(tableTitleElement);
 
             // Create table header
@@ -454,18 +486,32 @@
                         'static/samples/gen/samples_musicldm',
                         'static/samples/gen/samples_stereo'
                     ],
-                    tableTitle: 'Table 1: Audio Comparison',
+                    tableTitle: 'Table 1: Music Generation Based on Text Descriptions.',
+                    tableId: "table1",
                     headers: ['#', 'GT', 'AudioLDM', 'MusicLDM', 'LDMME (Ours)']
                 },
                 {
-                    descriptionsPath: 'static/samples/gen/descriptions.txt',
+                    descriptionsPath: 'static/samples/gen/descriptions_.txt',
                     audioPaths: [
-                        'static/samples/gen/samples_gt',
-                        'static/samples/gen/samples_audioldm',
-                        'static/samples/gen/samples_musicldm',
-                        'static/samples/gen/samples_stereo'
+                        'static/samples/gen/samples_gt_',
+                        'static/samples/gen/samples_audioldm_',
+                        'static/samples/gen/samples_musicldm_',
+                        'static/samples/gen/samples_stereo_'
                     ],
-                    tableTitle: 'Table 2: Audio Analysis',
+                    tableTitle: 'Table 2: Smooth Concatenation of Music Segments.',
+                    tableId: "table2",
+                    headers: ['#', 'GT', 'AudioLDM', 'MusicLDM', 'LDMME (Ours)']
+                },
+                {
+                    descriptionsPath: 'static/samples/gen/descriptions_.txt',
+                    audioPaths: [
+                        'static/samples/gen/samples_gt_',
+                        'static/samples/gen/samples_audioldm_',
+                        'static/samples/gen/samples_musicldm_',
+                        'static/samples/gen/samples_stereo_'
+                    ],
+                    tableTitle: 'Table 3: Style Transfer of Music Segments Based on Text Descriptions.',
+                    tableId: "table3",
                     headers: ['#', 'GT', 'AudioLDM', 'MusicLDM', 'LDMME (Ours)']
                 }
                 // Add more configurations as needed
@@ -473,13 +519,55 @@
 
             for (const config of tablesConfig) {
                 const descriptions = await loadDescriptions(config.descriptionsPath);
-                createTable('tablesContainer', descriptions, config.audioPaths, config.tableTitle, config.headers);
+                createTable('tablesContainer', descriptions, config.audioPaths, config.tableTitle, config.headers, config.tableId);
             }
         }
 
         // Load tables when the page loads
         window.onload = initializeTables;
     </script>
+
+    <script>
+        // window.onload = function () {
+        //     function generateTOC() {
+        //         const toc = document.getElementById('toc');
+        //         const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+        //         const tocList = document.createElement('ul');
+        //         let previousLevel = 1;
+        //         let currentList = tocList;
+        //         let listStack = [tocList];
+
+        //         headings.forEach(heading => {
+        //             const level = parseInt(heading.tagName.substring(1));
+        //             const listItem = document.createElement('li');
+        //             const link = document.createElement('a');
+        //             link.href = `#${heading.id || (heading.id = heading.textContent.replace(/\s+/g, '-').toLowerCase())}`;
+        //             link.textContent = heading.textContent;
+        //             listItem.appendChild(link);
+
+        //             if (level > previousLevel) {
+        //                 const newList = document.createElement('ul');
+        //                 currentList.appendChild(newList);
+        //                 listStack.push(newList);
+        //             } else if (level < previousLevel) {
+        //                 while (level < previousLevel) {
+        //                     listStack.pop();
+        //                     previousLevel--;
+        //                 }
+        //             }
+        //             currentList = listStack[listStack.length - 1];
+        //             currentList.appendChild(listItem);
+        //             previousLevel = level;
+        //         });
+
+        //         toc.appendChild(tocList);
+        //     }
+
+        //     generateTOC();
+        //     initializeTables();
+        // }
+    </script>
+
 
 </body>
 
