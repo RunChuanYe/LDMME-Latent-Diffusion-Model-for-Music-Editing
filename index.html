@@ -6,8 +6,8 @@
     <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
     <!-- Replace the content tag with appropriate information -->
     <!-- TODO: open graph -->
-    <!-- <meta name="description" content="DESCRIPTION META TAG">
-    <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+    <meta name="description" content="Latent Diffusion Model for Music Editing">
+    <!-- <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
     <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
     <meta property="og:url" content="URL OF THE WEBSITE" /> -->
     <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
@@ -21,9 +21,10 @@
     <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
     <!-- <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
     <meta name="twitter:card" content="summary_large_image"> -->
+
     <!-- Keywords for your paper to be indexed by-->
-    <!-- <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="keywords" content="Diffusion Model, Music Editing, Music Generation, Music Demos">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
     <title>LDMME: Latent Diffusion Model for Music Editing</title>
@@ -205,10 +206,79 @@
         </div>
     </section>
     <!-- End paper abstract -->
-    
+
+    <!-- Model Architecture -->
+    <section class="hero is-small is-light">
+        <div class="hero-body">
+            <div class="container">
+                <h2 class="title">Model Architecture</h2>
+
+                <iframe src="static/pdfs/train_infer_v3.pdf" width="100%" height="550">
+                </iframe>
+                <p>
+                    The model architecture of the proposed LDMME is shown in Fig 1. We base our
+                    LDMME implementation on the code of Stable Audio [7]. In particular, we use
+                    a pre-trained DAC [13] as the audio codec and a pre-trained CLAP [24] Text
+                    Encoder to encode text conditions. Drawing inspiration from Stable Audio [7],
+                    the Unet model is developed based on Mousai [21] and integrates Seconds Total
+                    and Seconds Start encoders for training and inference across music of varying
+                    lengths. It is important to note that our model processes both input and output
+                    audio as waveform signals, rather than symbolic signals.
+                </p>
+                <small><br>[7] Evans, Z., Carr, C., Taylor, J., Hawley, S.H., Pons, J.: Fast timing-conditioned latent
+                    audio diffusion. arXiv preprint arXiv:2402.04825 (2024)</small>
+                <small><br>[13] Kumar, R., Seetharaman, P., Luebs, A., Kumar, I., Kumar, K.: High-fidelity audio
+                    compression with improved rvqgan. Advances in Neural Information Processing Systems 36
+                    (2024)</small>
+                <small><br>[21] Schneider, F., Kamal, O., Jin, Z., Schölkopf, B.: Mo\ˆ usai: Text-to-music generation
+                    with long-context latent diffusion. arXiv preprint arXiv:2301.11757 (2023)</small>
+                <small><br>[24] Wu, Y., Chen, K., Zhang, T., Hui, Y., Berg-Kirkpatrick, T., Dubnov, S.: Largescale
+                    contrastive language-audio pretraining with feature fusion and keyword-tocaption augmentation. In:
+                    ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP).
+                    pp. 1–5. IEEE (2023)</small>
+
+            </div>
+        </div>
+    </section>
+    <!--End Model Architecture -->
+
+
+    <section class="hero is-small is-light">
+        <div class="hero-body">
+            <div class="container">
+                <h2 class="title">Music Editing Definition</h2>
+                <p>
+                    <b>Smooth Concatenation of Music Segments:</b> For the smooth splicing of two music segments
+                    task, the model accepts two music segments and subsequently splices them into
+                    one segment, taking the splicing of the two segments as the to-be-modified portion,
+                    and the other portions remain unchanged. Samples are available at <a href="#table2">Table 2: Smooth Concatenation of Music Segments.</a>
+                </p>
+                <p>
+                    <b>Style Transfer of Music Segments Based on Text Descriptions:</b> To perform stylized modification of a music segment based on textual descriptions,
+                    we take an audio piece along with specified start and end times for
+                    the segment to be altered. The designated segment is then modified according
+                    to the provided text description. The part of the music that does not need to
+                    be modified remains unchanged. Samples are available at <a href="#table3">Table 3: Style Transfer of Music Segments Based on Text Descriptions. </a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- table of content -->
     <section class="section hero has-text-centered">
         <div id="toc">
             <h2 class="title is-3 is-center">Table of Contents</h2>
+            Here, we present some samples for music generation and music editing tasks. Tables 1 and 4 contain samples for music generation, while Tables 2 and 3 contain samples for music editing.
+            <br/>
+            Table 1 shows music generation based on text descriptions from the test dataset. Table 4 shows music generation based on text descriptions generated by GPT.
+            <br/>
+            
+            Table 2 illustrates the Smooth Concatenation of Music Segments task, where the content from 2.5 to 7.5 seconds of "Concatenation" is modified by AudioLDM, MusicLDM, or LDMME (Ours), while the rest remains unchanged.
+            <br/>
+            
+            Table 3 illustrates the Style Transfer of Music Segments Based on Text Descriptions task, where the content from 2.5 to 7.5 seconds of "GT" is modified by AudioLDM, MusicLDM, or LDMME (Ours), while the rest remains unchanged.
+            
             <ul>
                 <li><a href="#table1">Table 1: Music Generation Based on Text Descriptions.</a></li>
                 <li><a href="#table2">Table 2: Smooth Concatenation of Music Segments.</a></li>
@@ -219,6 +289,7 @@
         </div>
     </section>
 
+    <!-- music samples -->
     <section class="section hero">
         <div class="hero-body">
             <div class="container has-text-centered" id="tablesContainer">
@@ -265,8 +336,6 @@
         </div>
     </section> -->
     <!-- End image carousel -->
-
-
 
 
     <!-- Youtube video -->
@@ -530,9 +599,9 @@
                 {
                     descriptionsPath: 'static/samples/gpt/descriptions.txt',
                     audioPaths: [
-                    //     'static/samples/gpt/samples_audioldm',
-                    //     'static/samples/gpt/samples_musicldm',
-                    //     'static/samples/gpt/samples_stereo'
+                        //     'static/samples/gpt/samples_audioldm',
+                        //     'static/samples/gpt/samples_musicldm',
+                        //     'static/samples/gpt/samples_stereo'
                         'static/samples/gpt/samples_audioldm_norm',
                         'static/samples/gpt/samples_musicldm_norm',
                         'static/samples/gpt/samples_stereo_norm'
