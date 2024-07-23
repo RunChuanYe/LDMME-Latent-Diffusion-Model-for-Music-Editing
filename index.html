@@ -213,6 +213,8 @@
                 <li><a href="#table1">Table 1: Music Generation Based on Text Descriptions.</a></li>
                 <li><a href="#table2">Table 2: Smooth Concatenation of Music Segments.</a></li>
                 <li><a href="#table3">Table 3: Style Transfer of Music Segments Based on Text Descriptions. </a></li>
+                <li><a href="#table4">Table 4: Music Generation Based on Text Descriptions Generated from GPT. </a></li>
+                <!-- <li><a href="#table5">Table 5: Music Generation Based on Text Descriptions Generated from GPT norm. </a></li> -->
             </ul>
         </div>
     </section>
@@ -480,10 +482,14 @@
                 {
                     descriptionsPath: 'static/samples/gen/descriptions.txt',
                     audioPaths: [
-                        'static/samples/gen/samples_gt',
-                        'static/samples/gen/samples_audioldm',
-                        'static/samples/gen/samples_musicldm',
-                        'static/samples/gen/samples_stereo'
+                        // 'static/samples/gen/samples_gt',
+                        // 'static/samples/gen/samples_audioldm',
+                        // 'static/samples/gen/samples_musicldm',
+                        // 'static/samples/gen/samples_stereo'
+                        'static/samples/gen/samples_gt_norm',
+                        'static/samples/gen/samples_audioldm_norm',
+                        'static/samples/gen/samples_musicldm_norm',
+                        'static/samples/gen/samples_stereo_norm'
                     ],
                     tableTitle: 'Table 1: Music Generation Based on Text Descriptions.',
                     tableId: "table1",
@@ -492,10 +498,14 @@
                 {
                     descriptionsPath: 'static/samples/concat/descriptions.txt',
                     audioPaths: [
-                        'static/samples/concat/samples_gt',
-                        'static/samples/concat/samples_audioldm',
-                        'static/samples/concat/samples_musicldm',
-                        'static/samples/concat/samples_stereo'
+                        // 'static/samples/concat/samples_gt',
+                        // 'static/samples/concat/samples_audioldm',
+                        // 'static/samples/concat/samples_musicldm',
+                        // 'static/samples/concat/samples_stereo'
+                        'static/samples/concat/samples_gt_norm',
+                        'static/samples/concat/samples_audioldm_norm',
+                        'static/samples/concat/samples_musicldm_norm',
+                        'static/samples/concat/samples_stereo_norm'
                     ],
                     tableTitle: 'Table 2: Smooth Concatenation of Music Segments.',
                     tableId: "table2",
@@ -504,15 +514,44 @@
                 {
                     descriptionsPath: 'static/samples/style_transfer/descriptions.txt',
                     audioPaths: [
-                        'static/samples/style_transfer/samples_gt',
-                        'static/samples/style_transfer/samples_audioldm',
-                        'static/samples/style_transfer/samples_musicldm',
-                        'static/samples/style_transfer/samples_stereo'
+                        // 'static/samples/style_transfer/samples_gt',
+                        // 'static/samples/style_transfer/samples_audioldm',
+                        // 'static/samples/style_transfer/samples_musicldm',
+                        // 'static/samples/style_transfer/samples_stereo'
+                        'static/samples/style_transfer/samples_gt_norm',
+                        'static/samples/style_transfer/samples_audioldm_norm',
+                        'static/samples/style_transfer/samples_musicldm_norm',
+                        'static/samples/style_transfer/samples_stereo_norm'
                     ],
                     tableTitle: 'Table 3: Style Transfer of Music Segments Based on Text Descriptions.',
                     tableId: "table3",
                     headers: ['#', 'GT', 'AudioLDM', 'MusicLDM', 'LDMME (Ours)']
-                }
+                },
+                {
+                    descriptionsPath: 'static/samples/gpt/descriptions.txt',
+                    audioPaths: [
+                    //     'static/samples/gpt/samples_audioldm',
+                    //     'static/samples/gpt/samples_musicldm',
+                    //     'static/samples/gpt/samples_stereo'
+                        'static/samples/gpt/samples_audioldm_norm',
+                        'static/samples/gpt/samples_musicldm_norm',
+                        'static/samples/gpt/samples_stereo_norm'
+                    ],
+                    tableTitle: 'Table 4: Music Generation Based on Text Descriptions Generated from GPT.',
+                    tableId: "table4",
+                    headers: ['#', 'AudioLDM', 'MusicLDM', 'LDMME (Ours)']
+                },
+                // {
+                //     descriptionsPath: 'static/samples/gpt/descriptions.txt',
+                //     audioPaths: [
+                //         'static/samples/gpt/samples_audioldm_norm',
+                //         'static/samples/gpt/samples_musicldm_norm',
+                //         'static/samples/gpt/samples_stereo_norm'
+                //     ],
+                //     tableTitle: 'Table 5: Music Generation Based on Text Descriptions Generated from GPT norm.',
+                //     tableId: "table5",
+                //     headers: ['#', 'AudioLDM', 'MusicLDM', 'LDMME (Ours)']
+                // }
                 // Add more configurations as needed
             ];
 
